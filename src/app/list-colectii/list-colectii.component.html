@@ -1,0 +1,25 @@
+
+<table class="tbl grid" style="width: 100%; margin-top: 5px;">
+  <thead>
+    <tr style="height: 30px; background-color: burlywood;">
+      <th class="col40" data-name="colectie_t">Colectie</th>
+      <th class="col120" data-name="nume_t">Nume </th>
+      <th class="col120" data-name="an_t">An</th>
+      <th class="col120" data-name="luna_t">Luna </th>
+      <th class="col160" data-name="judet_t">Judet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="" *ngFor="let c of lista" (click)="sel=c" [class.selrow]="sel==c" >
+      <td class="center" data-name="colectie">{{c.colectie}}</td>
+      <td class="center" data-name="nume">{{c.nume}}</td>
+      <td class="center" data-name="an">{{c.an}}</td>
+      <td class="center" data-name="luna">{{c.luna}}</td>
+      <td class="center" data-name="judet">{{c.judet}}</td>
+    </tr>
+  </tbody>
+</table> 
+
+
+<button (click)="onselecteaza()">Selecteaza</button>
+<button [routerLink]="['']">Inchide</button>

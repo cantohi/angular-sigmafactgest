@@ -1,0 +1,424 @@
+    <div class="mainDiv">
+
+        <div class="titlu" data-name="titlu">Foaie Condica</div>
+
+        <div class="aranjareAntet" data-name="antet" *ngFor="let ant of antet">
+            <div>
+                <div class="g-2">
+                    <div class="ddcontainer">
+                        <label>Sectie:</label>
+                        <div class="dropdown">
+                            <input type="text" data-name="sectie_id" style="width:70%;">
+                            <button data-name="sectie_id_pop" type="button" class="btn-dropdown"> &nbsp; </button>
+                            <dddw [list$]="dddwSectii"></dddw>
+                        </div>
+                    </div>
+
+                    <div class="ddcontainer">
+                        <label>Medic:</label>
+                        <div class="dropdown">
+                            <input type="text" data-name="medicsef_id" style="width:70%;">
+                            <button data-name="medicsef_id_pop" type="button" class="btn-dropdown"> &nbsp; </button>
+                        </div>
+                    </div>
+ 
+                </div>
+
+
+ccccc{{idAntet}}xxxx
+                <div class="g-2">
+                    <div class="g-2">
+                        <label>Nr. Foaie:</label>
+                        <input type="text" data-name="act" disabled="disabled" [(value)]="ant.act">
+
+                    </div>
+
+                    <div class="g-2">
+                        <label> Data:</label>
+                        <input type="text" id="data" data-name="data" [(value)]="ant.data"/>
+
+
+                    </div>
+                    <div class="g-2">
+                        Finalizata:
+                        <input type="checkbox" data-name="finalizat" readonly="readonly" disabled="disabled" style="vertical-align:middle" [checked]="ant.finalizat"/> &nbsp;&nbsp; Eliberata:
+                        <input type="checkbox" data-name="eliberat" readonly="readonly" disabled="disabled" style="vertical-align:middle" [checked]="ant.eliberat"/>
+                        
+                    </div>
+                    <div class="g-2">
+                        <label> Tip:</label>&nbsp;&nbsp;&nbsp;
+                        <input type="text" data-name="tip_mat" disabled="disabled" style="width:100px">
+                        <span> Aparat: <input type="checkbox" data-name="aparat" readonly="readonly" disabled="disabled" style="vertical-align:middle" [checked]="ant.aparat"/> </span>
+                    </div>
+                </div>
+
+
+
+                <div class="g-1">
+                    <div data-name="row-debug-vis">
+                        <p>
+                            <label style="font-size:110%;">Utilizator:</label>
+                            <label data-name="id_user_add"></label>&nbsp;&nbsp;&nbsp;
+
+                            <label style="margin-left:100px;">Data/Ora:</label>
+                            <label data-name="data_addmod"></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span id="fcinfobox" style="color:red;"></span>
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <div class="g-2">
+                    <div class="ddcontainer">
+                        <label>Grup :&nbsp;&nbsp;</label>
+                        <div class="dropdown">
+                            <input type="text" data-name="si_flt_fo" style="width:70%;">
+                            <button data-name="si_flt_fo_pop" type="button" class="btn-dropdown"> &nbsp; </button>
+                        </div>
+                    </div>
+                 </div>
+                <div class="g-2">
+                    <div class="g-2">
+                        Tiparita:<input type="checkbox" data-name="tiparit" readonly="readonly" disabled="disabled" style="vertical-align:middle" />
+                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="aranjareAntet" data-name="antet_pac">
+            <div>
+                <div data-name="list_pac">.</div>
+            </div>
+        </div>
+
+        <!--<p>&nbsp;</p>-->
+        <div data-name="pozitii" style="overflow:auto;max-height:310px;">
+            <table class="tbls" data-name="lista_linii" style=" width:100%;" border="0">
+                <thead>
+                    <!--<tr class="isgfo">
+                        <th colspan="2"><label>Foaie obs</label> </th>
+                        <th colspan="4"><label>Medic curant</label> </th>
+                        <th></th>
+                    </tr>
+                    <tr class="ismedis">
+                        <th colspan="2"><label>Pacient medis</label>  </th>
+                        <th colspan="4" class="isamb"><label>NrRegAmb</label></th>
+                        <th></th>
+                    </tr>-->
+                    <tr>
+                         <th class="col120" style="z-index:900"><label>Medicament</label></th>
+                         <th class="col80"><label>Cant.</label></th>
+                         <th class="col80"><label>Ambalaj</label></th> 
+                         <th class="col80"><label>Gestiune</label></th> 
+                         <th class="col80"><label>Lot</label></th> 
+                         <th class="col80"><label>Data exp.</label></th> 
+                        <th class="col80 notfifoo"><label>Pret/UM baza</label></th> 
+                         <th class="col80 notfifoo"><label>Valoare</label></th> 
+                         <th class="col80 fifoo" ><label>Detalii pret</label></th> 
+                         <th class="col80"><label>Stoc/UM baza</label></th>
+                        
+                    </tr>
+
+                </thead>
+                <tbody class="strong8pt">
+
+                    <!-- spital : fo si medic-->
+                    <!--<tr >
+                        <td class="xcenter">
+                            <div class="dropdown">
+                                <input type="text" data-name="fo_id" style="width:90%;" class="isgfo" xplaceholder="Foaie observatie Ex: Popescu Marius">
+                                <button data-name="fo_id_pop" type="button" class="btn-dropdown isgfo"> &nbsp; </button>
+                            </div>
+                        </td>
+                        <td class="xcenter" colspan="5">
+                            <div class="dropdown">
+                                <input type="text" data-name="medic_id" class="isgfo" style="width:90%;" xplaceholder="Medic curant Ex: Popescu Valeriu">
+                                <button data-name="medic_id_pop" type="button" class="btn-dropdown isgfo"> &nbsp; </button>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>-->
+
+                    <!--ambulatoriu  : pacient si nrreg-->
+                    <!--<tr>
+                        <td  class="xcenter">
+                               <div class="dropdown">
+                                   <input type="text" data-name="pacient_id" style="width:90%;" class="isgfo" xplaceholder="Pacient Ex: Popescu Ion">
+                                <button data-name="pacient_id_pop" type="button" class="btn-dropdown isgfo"> &nbsp; </button>
+                                </div>
+                          </td>
+                        <td colspan="5" style="xpadding-left:4px"> <input data-name="nrregamb" type="text" style="width:52px" xplaceholder="Ex: 2" /></td>
+                    </tr>-->
+                    <!-- medicament + gestiune + etc -->
+                    <tr>
+                        <td class="xcenter"  style="width:55%;">
+                            <div class="dropdown">                              
+                                <input type="text" data-name="stocid" class="isgfo" style="width:88%;">
+                                <button data-name="stocid_pop" type="button" class="btn-dropdown isgfo"> &nbsp; </button>
+                                <button tabindex="-1" data-name="afismed" type="button" class="btn-dropdown isgfo" style="background-image:none"> ... </button>
+                            </div>
+                        </td>
+                        <td width="66px" class="right"><input data-name="cantitate" type="text" style="width:52px" xplaceholder="Ex: 1" /></td>
+                        <td  class="center"  style="width: auto; min-width: 66px;"   data-name="ambalaj_nume"></td>
+                        <td width="66px" class="center" data-name="gest_id"></td>                        
+                        <td width="66px" class="center" data-name="lot"></td>
+                        <td width="66px" class="center" data-name="data_exp"></td>
+                        <td width="66px" class="center notfifoo" data-name="pret_vanzc"></td>
+                        <td width="66px" class="center notfifoo" data-name="valoare"></td>
+                        <td width="1326px" class="center fifoo" data-name="det_pret"></td>
+                        <td width="66px" class="center" data-name="stoc"></td>
+
+                    </tr>
+
+                    <!-- informatii pns-->
+                    <tr class="pns pnsclass" style="display:none">
+
+                        <td colspan="9" style="padding-left:35px;">
+
+
+                            <div class="dropdown">
+                                <span>P.N.S:</span>
+                                <input type="text" data-name="pns_id" class="isgfo" style="width:29%;">
+                                <button data-name="pns_id_pop" type="button" class="btn-dropdown"> &nbsp; </button>
+
+                                <span class="paddingr10">Diagnostic:</span>
+                                <input type="text" data-name="icd10_id" style="width:22%;">
+                                <button data-name="icd10_id_pop" type="button" class="btn-dropdown"> &nbsp; </button>
+
+
+                                <span>Categorie P.N.S:</span>
+                                <input type="text" data-name="categpns_id" style="width:22%;">
+                                <button data-name="categpns_id_pop" type="button" class="btn-dropdown"> &nbsp; </button>
+
+                            </div>
+
+
+                        </td>
+
+                        
+
+                    </tr>
+
+                    <!-- observatii-->
+                    <tr class="row-details" >
+                      
+                        <td colspan="9"  style="padding-left:35px;">
+                            <!--<span class="paddingr10">Observatii: <textarea data-name="obs" style="width:70%"  xplaceholder="Ex: Observatie de test " ></textarea> </span>-->
+                            <span class="paddingr10">Observatii: <input data-name="obs" style="width:70%" xplaceholder="Ex: Observatie de test " /></span>
+                        </td>
+                        <!--<td colspan="2"></td>-->
+                    </tr>
+                    <!--<tr><td colspan="7" height="3px;" style="height:3px" ></td></tr>-->
+              
+
+                </tbody>
+            </table>
+
+        </div>
+        <p>&nbsp;</p>
+
+        <div id="butoane" style="float:left;margin-top:8px;">
+            <!--<fieldset style="display:inline;width:190px" data-name="fs_add">-->
+            <!--<legend>Adauga:</legend>-->
+            <button tabindex="-1" data-name="add" class="btn">Adauga</button>
+            <button tabindex="-1" data-name="addm" class="btn">Adauga M</button>
+            <button tabindex="-1" data-name="dup_start" class="btn">Copiaza</button>
+            <!--</fieldset>-->
+            <button tabindex="-1" data-name="del" class="btn">Sterge</button>
+            <button tabindex="-1" data-name="save" class="btn" accesskey="S">Salveaza</button>
+            <!--<button  tabindex="-1" data-name="recalcularepoz" class="btn" accesskey="R">Poz. calc.</button>-->
+            <button tabindex="-1" data-name="finalizare" class="btn">Finalizeaza</button>
+            <button tabindex="-1" data-name="listare" class="btn">Tipareste</button>
+            <button tabindex="-1" data-name="stergefc" class="btn" >Sterge FC</button>
+            <button tabindex="-1" data-name="inchide" class="btn" (click)="onclose()">Inchide</button>
+
+        </div>
+        <div tabindex="-1" style="text-align: right; float: right; ">
+            Informatii suplimentare rand <input data-name="detaliirand" type="checkbox" />
+        </div>
+
+
+
+        <div style="display:none;width:90%;">
+            <div style="" data-name="dialogmed" style="width:100%">
+                <div data-name="med_list" style="height:400px;width:100%">
+                    <table >
+                        <thead>
+                            <tr>
+                                <th style="width:600px">Medicament</th>
+                                <th style="width:70px">Cod produs</th>
+                                <th style="width:100px">Ambalaj</th>
+                                <th style="width:150px">Gestiune</th>
+                                <th style="width:70px">CodGest</th>
+                                <th style="width:100px">Locatie</th>
+                                <th style="width:70px">Lot</th>
+                                <th style="width:70px">Data exp.</th>
+                                <th style="width:70px">Stoc/UM baza</th>
+                                <th style="width:70px" class="notfifoo">Pret/UM baza</th>
+                                <!--<th>Pret Max</th>
+                    <th>Pret Vanz</th>-->
+                                <th style="width:10%">PNS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td >
+                                    <span data-name="mat_nume"></span>
+                                    &nbsp;|&nbsp;<span data-name="denintl"></span>                                    
+                                </td>
+                                <td data-name="cod_mat"></td>
+                                <td data-name="ambalaj_nume"></td>
+                                <td data-name="gest_nume"></td>
+                                <td data-name="cod_gest"></td>
+                                <td data-name="locatie_nume"></td>
+                                <td data-name="lot"></td>
+                                <td data-name="data_exp"></td>
+                                <td data-name="stoc" style="text-align:right"></td>
+                                <td data-name="pretf" class="notfifoo" style="text-align:right"></td>
+                                <!--<td data-name="pret_vanz"></td>
+        <td data-name="pret_max"></td>-->
+                                <td data-name="pns_nume"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="padding:20px">
+                    <input data-name="med_filtru" />
+                    <button data-name="med_cauta" class="btn" style="">Cauta</button>
+                    <button data-name="med_reset" class="btn" style="margin-right:100px;">Reset</button>
+
+                    <button data-name="med_ok" class="btn">OK</button>
+                    <button data-name="med_ko" class="btn">Renunta</button>
+                </div>
+                <div data-name="med_adaugate">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<iframe id="download-frame" style="visibility:hidden"></iframe>-->
+    <div style="display:none">
+        <div class="dw" data-name="find_fc_deschisa_sect_div" style="">
+            <div data-name="find_fc_deschisa_sect" style="max-height:300px">
+                <table class="tbl grid" style="margin-top:5px; width:100%;">
+                    <thead>
+                        <tr style="background-color:burlywood;height:30px;">
+                            <th class="col40">Data</th>
+                            <th class="col120">Nr. </th>
+                            <th class="col120">Tip foaie</th>
+                            <th class="col120">Numar Medicamente</th>
+                            <th class="col120">User add. </th>
+                            <th class="col120">User mod. </th>
+                            <th class="col160">Eliberat</th>
+                            <th class="col120">Validat</th>
+                            <th class="col120">Finalizat</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td data-name="data" class="center"></td>
+                            <td data-name="act" class="center">&nbsp;</td>
+                            <td data-name="tip_mat"></td>
+                            <td data-name="nrmedicamente" class="center">&nbsp;</td>
+                            <td data-name="user_ini" class="center">&nbsp;</td>
+                            <td data-name="user_name" class="center">&nbsp;</td>
+
+                            <td class="center"><input type="checkbox" data-name="eliberat" disabled="disabled" /></td>
+                            <td class="center"><input type="checkbox" data-name="validat" disabled="disabled" /></td>
+                            <td class="center"><input type="checkbox" data-name="finalizat" disabled="disabled" /></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div data-name="fin_fc_txt1" style="margin:4px;font-weight:700">
+                Atentie exista deja o foie de condica deschisa pe aceasta sectie
+            </div>
+            <div data-name="fin_fc_txt2" style="margin:4px;font-weight:700">
+                Atentie exista deja foi de condica deschise pe aceasta sectie
+            </div>
+            <button class="xbtn" data-name="find_fc_sel">Foloseste foaia selectata</button>
+            <button class="xbtn" data-name="find_fc_ko">Continua cu foaia noua</button>
+        </div>
+    </div>
+
+
+    <!--//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // duplicare pozitii FC anterioare  2019.06.10 - prefix dup_
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div style="display:none">
+        <div class="dw" data-name="dup_div_dialog" style="padding:10px;padding-top:0px;">
+            <div data-name="dup_div_pas1">
+                <div data-name="dup_fc_list" style="max-height:300px">
+                    <table class="tbl grid" style="margin-top:5px; width:100%;">
+                        <thead>
+                            <tr style="background-color:burlywood;height:30px;">
+                                <th class="col40">Data</th>
+                                <th class="col120">Nr. </th>
+                                <th class="col120">Numar Medicamente</th>
+                                <th class="col120">Medicamente</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-name="data" class="center"></td>
+                                <td data-name="act" class="center">&nbsp;</td>
+                                <td data-name="nrmedicamente" class="center">&nbsp;</td>
+                                <td data-name="medicamente" class="center">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button data-name="dup_sel_fc">Continua cu foaia selectata</button>
+                <button data-name="dup_exit1">Renunta</button>
+            </div>
+            <div data-name="dup_div_pas2">
+                <div data-name="dup_med_list" style="overflow:auto;max-height:310px;">
+                    <table class="tbls" data-name="lista_linii" style=" width:100%;" border="0">
+                        <thead>
+                            <tr>
+                                <th class="col120" style="z-index:900"><label>Sel</label></th>
+                                <th class="col120" style="z-index:900"><label>Medicament</label></th>
+                                <th class="col80"><label>Cant.</label></th>
+                                <th class="col80"><label>Ambalaj</label></th>
+                                <th class="col80"><label>Gestiune</label></th>
+                                <th class="col80"><label>Lot</label></th>
+                                <th class="col80"><label>Data exp.</label></th>
+                                <th class="col80 notfifoo"><label>Pret/UM baza</label></th>
+                                <th class="col80 notfifoo"><label>Valoare</label></th>
+                                <th class="col80 fifoo"><label>Detalii pret</label></th>
+                                <th class="col80"><label>Stoc/UM baza</label></th>
+                            </tr>
+                        </thead>
+                        <tbody class="strong8pt">
+
+                            <tr>
+                                <td class="center"><input type="checkbox" data-name="sel" /></td>
+                                <td class="xcenter" style="width:55%;" data-name="stocid"></td>
+                                <td width="66px" class="center" data-name="cantitate"></td>
+                                <td class="center" style="width: auto; min-width: 66px;" data-name="ambalaj_nume"></td>
+                                <td width="66px" class="center" data-name="gest_id"></td>
+                                <td width="66px" class="center" data-name="lot"></td>
+                                <td width="66px" class="center" data-name="data_exp"></td>
+                                <td width="66px" class="center notfifoo" data-name="pret_vanzc"></td>
+                                <td width="66px" class="center notfifoo" data-name="valoare"></td>
+                                <td width="1326px" class="center fifoo" data-name="det_pret"></td>
+                                <td width="66px" class="center" data-name="stoc"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <br />
+                <div data-name="dup_info"><!--x din x med selectate--></div>
+                <br />
+                <button data-name="dup_ok">Adauga medicamentele selectate</button>
+                <button data-name="dup_back">Inapoi</button>
+                <button data-name="dup_exit">Renunta</button>
+            </div>
+        </div>
+    </div>

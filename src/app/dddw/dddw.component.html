@@ -1,0 +1,14 @@
+
+<div>
+  dddw  
+  <input type="text" #searchBox  (input)="search(searchBox.value)"/>
+  <button data-name="sectie_id_pop" type="button" class="btn-dropdown"> &nbsp; </button>
+
+  
+  
+
+<ul class="search-result">
+    <li *ngFor="let r of listF">
+      xxx{{r.sectie_id}} {{r.nume}}
+    </li>
+  </ul>
